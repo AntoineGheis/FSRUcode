@@ -11,3 +11,6 @@ To reproduce the results, download this repository and install Julia (v1.10 or h
     3. `using FSRU`
     4. `generate_map_greenfield()`
 Each step may take a while as the complete project is compiled and the the experiments are reproduced before creating the map. The map will pop in a dedicated interactive window. Use right-click to pan the map and the scroll wheel to zoom. Reset the zoom using Ctrl+left-click.
+
+
+coucou
