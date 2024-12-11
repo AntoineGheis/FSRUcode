@@ -162,6 +162,9 @@ begin
         # Contrainte d'importation de gaz depuis la Russie
         #c_russia_import[t in periods],
         #sum(import_flow["RU", t]) <= MaxRussiaImport
+        #Contrainte sur les importations totales en 2030
+        #c_total_import_2030[t in periods if t == 2030],
+        #sum(import_flow[n, t] for n in import_set) <= bcm2030
             
     end
     @expression(model, capex_cost[t in periods], sum(port_upgrade[p,t]*port_capex[t] for p in port_set))
