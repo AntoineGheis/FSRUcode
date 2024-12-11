@@ -159,7 +159,9 @@ begin
         #upgrading
         c_upgrading[p in port_set, t in periods],
             port_upgraded[p,t] <= sum(port_upgrade[p,k] for k in 1:t)
-
+        # Contrainte d'importation de gaz depuis la Russie
+        #c_russia_import[t in periods],
+        #sum(import_flow["RU", t]) <= MaxRussiaImport
             
     end
     @expression(model, capex_cost[t in periods], sum(port_upgrade[p,t]*port_capex[t] for p in port_set))
